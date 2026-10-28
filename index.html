@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRG Oran | Comptoir de Robinetterie Générale - 4ème Périphérique Es-Sénia</title>
+  <meta name="description" content="Comptoir de Robinetterie Générale (SARL CRG) à Oran : Importateur et grossiste officiel de robinetterie industrielle, pompes Wilo, chauffage central, tuyauterie cuivre et raccords multicouche. Dépôt et Showroom Îlot N°08, 4ème Périphérique, Es-Sénia.">
+  <meta name="keywords" content="CRG Oran, Comptoir Robinetterie Générale, 4ème périphérique Es Senia, robinetterie industrielle Oran, pompes Wilo Algérie, chauffage central Oran, grossiste plomberie Algérie">
+  <meta name="author" content="SARL CRG Oran">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="CRG Oran - Comptoir de Robinetterie Générale | Leader B2B & Chantiers">
+  <meta property="og:description" content="Catalogue Pro & Devis Express WhatsApp : Robinetterie, Chauffage Central, Pompes Wilo & Raccords certifiés. Dépôt 4ème Périphérique Oran.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/crg_logo.jpg">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WholesaleStore",
+    "name": "SARL CRG - Comptoir de Robinetterie Générale",
+    "image": "assets/crg_logo.jpg",
+    "telephone": "+213-560-25-26-32",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Îlot N°08, Zone Industrielle, 4ème Périphérique",
+      "addressLocality": "Es-Sénia, Oran",
+      "postalCode": "31000",
+      "addressCountry": "DZ"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 35.6515,
+      "longitude": -0.6385
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"],
+      "opens": "08:00",
+      "closes": "17:00"
+    }
+  }
+  </script>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/jpeg" href="assets/crg_logo.jpg">
+</head>
+<body>
+
+  <!-- 1. BANDEAU HAUT D'URGENCE & COORDONNÉES RÉELLES -->
+  <div class="top-bar">
+    <div class="top-bar-location">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+        <circle cx="12" cy="10" r="3"></circle>
+      </svg>
+      <span data-i18n="topBarDepot">Siège & Dépôt : Îlot N°08, Zone Industrielle, 4ème Périphérique, Es-Sénia, Oran</span>
+    </div>
+    <div class="top-bar-contacts">
+      <a href="tel:+213560252632" class="top-link">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+        <span data-i18n="callUs">Appel Commercial : 0560 25 26 32</span>
+      </a>
+      <button id="lang-switch" class="lang-switch-btn" aria-label="Changer de langue">العربية (AR)</button>
+    </div>
+  </div>
+
+  <!-- 2. NAVIGATION PRINCIPALE (STICKY GLASSMORPHISM) -->
+  <header class="navbar" id="main-nav">
+    <a href="#" class="nav-brand">
+      <img src="assets/crg_logo.jpg" alt="Logo SARL CRG Oran" class="brand-logo-img">
+      <div class="brand-text">
+        <h1>SARL CRG</h1>
+        <div class="brand-tagline">Comptoir de Robinetterie Générale • Oran</div>
+      </div>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="#catalogue" class="active">Catalogue B2B</a></li>
+      <li><a href="#depot">Dépôt 4ème Périphérique</a></li>
+      <li><a href="#partenaires">Marques Certifiées</a></li>
+      <li><a href="#contact">Contact & Horaires</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <!-- Déclencheur du Panier Devis Pro -->
+      <button class="cart-trigger-btn" id="cart-trigger" aria-label="Ouvrir le devis express">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="9" cy="21" r="1"></circle>
+          <circle cx="20" cy="21" r="1"></circle>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+        </svg>
+        <span data-i18n="cartTriggerText">Mon Devis Pro</span>
+        <span class="cart-count-badge" id="cart-count" style="display: none;">0</span>
+      </button>
+
+      <!-- Bouton WhatsApp Commercial -->
+      <a href="https://api.whatsapp.com/send?phone=213560252632&text=Bonjour%20CRG%20Oran,%20je%20souhaite%20des%20renseignements%20pour%20un%20projet." target="_blank" class="btn btn-whatsapp" id="btn-header-wa">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12.031 2C6.496 2 2 6.495 2 12.029c0 1.954.563 3.774 1.536 5.313L2.001 22l4.821-1.493A9.97 9.97 0 0 0 12.03 22c5.534 0 10.029-4.496 10.029-10.03C22.06 6.495 17.565 2 12.031 2zm5.72 14.156c-.244.686-1.218 1.332-1.785 1.408-.544.072-1.238.106-3.864-.984-2.855-1.185-4.686-4.086-4.83-4.275-.138-.19-1.144-1.523-1.144-2.903 0-1.38.723-2.059.98-2.342.257-.282.56-.353.748-.353.187 0 .375.002.538.01.173.009.404-.066.632.48.236.567.807 1.97.877 2.112.071.142.118.309.024.499-.094.19-.142.308-.283.473-.14.166-.296.371-.422.498-.142.142-.29.297-.124.582.165.284.737 1.215 1.58 1.966 1.085.966 2 1.266 2.285 1.407.284.142.452.119.619-.071.166-.19.712-.83.901-1.116.19-.284.38-.237.64-.142.261.095 1.657.781 1.942.923.284.143.475.214.545.333.072.12.072.69-.172 1.376z"/>
+        </svg>
+        <span>WhatsApp</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- 3. HERO SECTION ULTRA-IMMERSIVE -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-pill-badge">
+        <span class="pulse-dot"></span>
+        <span data-i18n="wholesalerBadge">GROSSISTE ET IMPORTATEUR OFFICIEL EN ALGÉRIE</span>
+      </div>
+
+      <h2 class="hero-title">
+        <span data-i18n="heroTitlePart1">L'Excellence en Robinetterie,</span> <br>
+        <span class="highlight-blue" data-i18n="heroTitlePart2">Pompage & Chauffage</span> <br>
+        <span class="highlight-copper" data-i18n="heroTitlePart3">à Oran</span>
+      </h2>
+
+      <p class="hero-desc" data-i18n="heroDesc">
+        Depuis plus de 30 ans, le Comptoir de Robinetterie Générale (CRG) approvisionne les installateurs, quincailleries et grands chantiers d'Algérie en matériel certifié d'origine européenne et internationale.
+      </p>
+
+      <div class="hero-cta-group">
+        <a href="#catalogue" class="btn btn-primary" id="btn-hero-catalog">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+          <span data-i18n="btnCatalog">Consulter le Catalogue Pro</span>
+        </a>
+
+        <a href="https://api.whatsapp.com/send?phone=213560252632&text=Bonjour,%20je%20souhaite%20un%20devis%20de%20gros%20CRG%20Oran." target="_blank" class="btn btn-copper" id="btn-hero-wa">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+          <span data-i18n="btnWhatsAppQuote">Devis Express WhatsApp</span>
+        </a>
+      </div>
+
+      <!-- Compteurs Statistiques Métier -->
+      <div class="hero-stats-grid">
+        <div class="stat-item">
+          <div class="stat-number" data-i18n="statYears">+30 Ans</div>
+          <div class="stat-label" data-i18n="statYearsLabel">D'Excellence Métier</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-i18n="statRefs">4 500+</div>
+          <div class="stat-label" data-i18n="statRefsLabel">Articles en Stock Réel</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-i18n="statWilayas">58 Wilayas</div>
+          <div class="stat-label" data-i18n="statWilayasLabel">Livraison & Expédition</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-i18n="statBrands">100%</div>
+          <div class="stat-label" data-i18n="statBrandsLabel">Certifié d'Origine</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Carte Visuelle Interactive du Dépôt / Showroom -->
+    <div class="hero-showcase-card" id="depot">
+      <div class="showcase-header">
+        <span class="depot-badge" data-i18n="depotLiveBadge">Dépôt Ouvert 6j/7</span>
+        <span style="font-size: 0.8rem; color: var(--text-dim);">8h00 - 17h00</span>
+      </div>
+
+      <h3 style="font-size: 1.4rem; margin-bottom: 8px;" data-i18n="depotTitle">Enlèvement Rapide 4ème Périphérique</h3>
+      <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 18px;" data-i18n="depotDesc">
+        Emplacement stratégique à Es-Sénia sur la 4e Rocade. Quai de chargement direct pour semi-remorques et camionnettes.
+      </p>
+
+      <div class="showcase-preview-box">
+        <div class="depot-location-row">
+          <div class="location-icon-pin">📍</div>
+          <div>
+            <div style="font-weight: 700; font-size: 0.95rem; color: var(--text-main);">Zone Industrielle Es-Sénia</div>
+            <div style="font-size: 0.8rem; color: var(--accent-copper);">Îlot N°08, 4ème Périphérique (Oran)</div>
+          </div>
+        </div>
+
+        <ul class="showcase-feature-list">
+          <li>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span data-i18n="feature1">Accès poids lourds et stationnement aisé</span>
+          </li>
+          <li>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span data-i18n="feature2">Facturation pro et bons de livraison immédiats</span>
+          </li>
+          <li>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span data-i18n="feature3">Conseil technique hydraulique par nos ingénieurs</span>
+          </li>
+        </ul>
+      </div>
+
+      <a href="https://maps.google.com/?q=35.6515,-0.6385" target="_blank" class="btn btn-outline" style="width: 100%;" id="btn-depot-gps">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg>
+        <span data-i18n="btnGpsRoute">Itinéraire GPS Dépôt (Google Maps / Waze)</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- 4. BANDEAU DES MARQUES PARTENAIRES OFFICIELLES -->
+  <section class="partners-band" id="partenaires">
+    <div class="partners-inner">
+      <span class="partners-tag">Distributeur Officiel Agréé :</span>
+      <img src="assets/general_fittings.png" alt="General Fittings Italie" class="partner-logo-item" title="General Fittings (Italie)">
+      <img src="assets/miro.png" alt="Miro Europe" class="partner-logo-item" title="Miro Europe">
+      <img src="assets/halcor.png" alt="Halcor Cuivre" class="partner-logo-item" title="Halcor Cuivre">
+      <img src="assets/alba.png" alt="Alba Siphons" class="partner-logo-item" title="Alba Siphons">
+      <div style="font-weight: 800; color: #10B981; letter-spacing: 0.1em; font-size: 1.1rem; text-transform: uppercase;">WILO • NOFER</div>
+    </div>
+  </section>
+
+  <!-- 5. SECTION CATALOGUE INTERACTIF B2B -->
+  <section class="catalogue-section" id="catalogue">
+    <div class="section-head">
+      <div>
+        <div class="section-subtitle" data-i18n="catalogueSubtitle">STOCKS DISPONIBLES EN TEMPS RÉEL</div>
+        <h2 class="section-title" data-i18n="catalogueTitle">Rayons Spécialisés B2B & Industrie</h2>
+      </div>
+    </div>
+
+    <!-- Contrôles : Recherche & Filtres par catégorie -->
+    <div class="catalogue-controls">
+      <div class="search-box-wrapper">
+        <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="text" id="search-input" class="search-input" placeholder="Rechercher une vanne, pompe Wilo, raccord, diamètre, marque...">
+      </div>
+
+      <div class="category-filter-pills" id="category-pills">
+        <button class="cat-pill active" data-cat="all" data-i18n="catAll">Tous les Rayons</button>
+        <button class="cat-pill" data-cat="robinetterie" data-i18n="catRobinetterie">Robinetterie & Vannes</button>
+        <button class="cat-pill" data-cat="pompes" data-i18n="catPompes">Pompes & Surpresseurs</button>
+        <button class="cat-pill" data-cat="chauffage" data-i18n="catChauffage">Chauffage Central</button>
+        <button class="cat-pill" data-cat="tuyauterie" data-i18n="catTuyauterie">Tuyauterie & Raccords</button>
+        <button class="cat-pill" data-cat="evacuation" data-i18n="catEvacuation">Évacuation & Siphons</button>
+        <button class="cat-pill" data-cat="sanitaire" data-i18n="catSanitaire">Chauffe-eau & Sanitaire</button>
+      </div>
+    </div>
+
+    <!-- Grille des Produits -->
+    <div class="products-grid" id="products-grid">
+      <!-- Rendu dynamique via app.js -->
+    </div>
+  </section>
+
+  <!-- 6. GÉOLOCALISATION & SHOWROOM DU 4ÈME PÉRIPHÉRIQUE -->
+  <section class="location-section" id="contact">
+    <div class="location-container">
+      <div>
+        <div class="section-subtitle">ACCÈS DIRECT CLIENTS ET TRANSPORTEURS</div>
+        <h2 style="font-size: 2.2rem; margin-bottom: 16px;">Au Cœur de la Zone Industrielle d'Es-Sénia</h2>
+        <p style="color: var(--text-muted); margin-bottom: 24px; line-height: 1.7;">
+          Positionné directement sur le 4ème périphérique d'Oran, notre complexe logistique comprend plus de 3 000 m² de stockage couvert, un showroom d'exposition sanitaire et robinetterie, et une zone dédiée au chargement rapide de camions pour les expéditions vers l'ensemble des 58 wilayas.
+        </p>
+
+        <div class="coord-box">
+          <div style="font-weight: 800; color: var(--accent-gold); margin-bottom: 4px;">COORDONNÉES LOGISTIQUES :</div>
+          <div style="font-size: 0.95rem; color: var(--text-main);">SARL CRG — Îlot N°08, Zone Industrielle, 4e Périphérique, Es-Sénia, Oran (31000)</div>
+          <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px;">Coordonnées GPS : 35.6515° N, 0.6385° W</div>
+        </div>
+
+        <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+          <a href="tel:+213560252632" class="btn btn-primary" id="btn-call-depot">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            0560 25 26 32
+          </a>
+          <a href="https://waze.com/ul?ll=35.6515,-0.6385&navigate=yes" target="_blank" class="btn btn-outline" id="btn-waze-nav">
+            Navigation Waze
+          </a>
+        </div>
+      </div>
+
+      <div class="map-card-container">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px;">
+          <h4 style="color: var(--accent-copper);">Horaires d'Enlèvement & Facturation</h4>
+          <span style="font-size: 0.75rem; background: rgba(16, 185, 129, 0.15); color: #10B981; padding: 3px 8px; border-radius: 9999px; font-weight: 700;">Service Continu</span>
+        </div>
+        <div style="font-size: 0.9rem; line-height: 2; color: var(--text-muted);">
+          <div>• <strong>Du Samedi au Mercredi :</strong> 08h00 – 17h00</div>
+          <div>• <strong>Jeudi :</strong> 08h00 – 12h30</div>
+          <div>• <strong>Vendredi :</strong> Fermé (Journée d'astreinte chantiers)</div>
+          <div>• <strong>Email Officiel :</strong> contact@crg-dz.com</div>
+          <div>• <strong>Service Commercial Fixe :</strong> +213 (0) 41 51 51 56</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. MODALE DU BON DE COMMANDE / DEVIS EXPRESS WHATSAPP -->
+  <div class="cart-modal-backdrop" id="cart-modal-backdrop">
+    <div class="cart-modal">
+      <div class="modal-header">
+        <div>
+          <h3 style="font-size: 1.25rem;" data-i18n="modalQuoteTitle">Votre Bon de Commande / Devis Express</h3>
+          <p style="font-size: 0.8rem; color: var(--text-dim);" data-i18n="modalQuoteSub">
+            Préparez votre liste et envoyez-la directement sur le WhatsApp du commercial CRG.
+          </p>
+        </div>
+        <button class="modal-close-btn" id="modal-close-btn">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <div id="modal-cart-items">
+          <!-- Rendu dynamique des articles -->
+        </div>
+
+        <div id="modal-cart-form" class="form-group-b2b" style="display: none;">
+          <div>
+            <label style="font-size: 0.8rem; font-weight: 700; color: var(--text-muted);" data-i18n="clientNameLabel">Votre Nom / Entreprise :</label>
+            <input type="text" id="b2b-client-name" class="b2b-input" placeholder="Ex: EURL BTP Plomberie / Artisan Mohamed" style="width: 100%; margin-top: 4px;">
+          </div>
+          <div>
+            <label style="font-size: 0.8rem; font-weight: 700; color: var(--text-muted);" data-i18n="clientPhoneLabel">Numéro de Téléphone :</label>
+            <input type="tel" id="b2b-client-phone" class="b2b-input" placeholder="Ex: 06 61 .. .. .." style="width: 100%; margin-top: 4px;">
+          </div>
+          <div>
+            <label style="font-size: 0.8rem; font-weight: 700; color: var(--text-muted);" data-i18n="clientWilayaLabel">Votre Ville / Wilaya :</label>
+            <input type="text" id="b2b-client-wilaya" class="b2b-input" placeholder="Ex: Oran / Mostaganem / Mascara" style="width: 100%; margin-top: 4px;">
+          </div>
+
+          <button class="btn btn-whatsapp" id="btn-send-whatsapp" style="width: 100%; padding: 14px; font-size: 1rem; margin-top: 8px;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12.031 2C6.496 2 2 6.495 2 12.029c0 1.954.563 3.774 1.536 5.313L2.001 22l4.821-1.493A9.97 9.97 0 0 0 12.03 22c5.534 0 10.029-4.496 10.029-10.03C22.06 6.495 17.565 2 12.031 2zm5.72 14.156c-.244.686-1.218 1.332-1.785 1.408-.544.072-1.238.106-3.864-.984-2.855-1.185-4.686-4.086-4.83-4.275-.138-.19-1.144-1.523-1.144-2.903 0-1.38.723-2.059.98-2.342.257-.282.56-.353.748-.353.187 0 .375.002.538.01.173.009.404-.066.632.48.236.567.807 1.97.877 2.112.071.142.118.309.024.499-.094.19-.142.308-.283.473-.14.166-.296.371-.422.498-.142.142-.29.297-.124.582.165.284.737 1.215 1.58 1.966 1.085.966 2 1.266 2.285 1.407.284.142.452.119.619-.071.166-.19.712-.83.901-1.116.19-.284.38-.237.64-.142.261.095 1.657.781 1.942.923.284.143.475.214.545.333.072.12.072.69-.172 1.376z"/>
+            </svg>
+            <span data-i18n="btnSendWhatsApp">Transmettre la Commande sur WhatsApp</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 8. BARRE FLOTTANTE MOBILE (SMARTPHONE DE TERRAIN) -->
+  <div class="mobile-action-bar">
+    <a href="tel:+213560252632" class="btn btn-outline" style="flex: 1; padding: 8px 10px; font-size: 0.8rem;">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+      Appeler
+    </a>
+    <button onclick="openCartModal()" class="btn btn-copper" style="flex: 1.2; padding: 8px 10px; font-size: 0.8rem;">
+      Devis WhatsApp (<span id="mobile-cart-badge">0</span>)
+    </button>
+    <a href="https://maps.google.com/?q=35.6515,-0.6385" target="_blank" class="btn btn-primary" style="flex: 1; padding: 8px 10px; font-size: 0.8rem;">
+      GPS Dépôt
+    </a>
+  </div>
+
+  <!-- 9. FOOTER INDUSTRIEL -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div>
+        <div style="font-size: 1.3rem; font-weight: 800; color: #FFF; margin-bottom: 10px;">SARL CRG ORAN</div>
+        <p style="margin-bottom: 14px; max-width: 380px;">
+          Comptoir de Robinetterie Générale. Leader dans l'importation et la distribution en gros d'équipements de plomberie, de chauffage central et de pompes industrielles en Algérie depuis 1992.
+        </p>
+        <div style="color: var(--accent-gold); font-size: 0.85rem; font-weight: 700;">Agrément & Distribution : Wilo, Miro Europe, General Fittings, Halcor, Nofer.</div>
+      </div>
+
+      <div>
+        <h5 style="color: #FFF; margin-bottom: 14px;">Nos Rayons</h5>
+        <ul style="list-style: none; line-height: 2;">
+          <li><a href="#catalogue" style="color: var(--text-dim); text-decoration: none;">Robinetterie Générale</a></li>
+          <li><a href="#catalogue" style="color: var(--text-dim); text-decoration: none;">Pompes et Surpresseurs</a></li>
+          <li><a href="#catalogue" style="color: var(--text-dim); text-decoration: none;">Chauffage Central</a></li>
+          <li><a href="#catalogue" style="color: var(--text-dim); text-decoration: none;">Raccords Multicouche & Cuivre</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h5 style="color: #FFF; margin-bottom: 14px;">Contact Direct</h5>
+        <div style="line-height: 2;">
+          <div>Fixe : 041 51 51 56</div>
+          <div>Mobile : 0560 25 26 32</div>
+          <div>Mobile : 0560 12 02 69</div>
+          <div>Email : contact@crg-dz.com</div>
+        </div>
+      </div>
+
+      <div>
+        <h5 style="color: #FFF; margin-bottom: 14px;">Siège Social</h5>
+        <p style="line-height: 1.6;">
+          Îlot N°08, Zone Industrielle<br>
+          4ème Périphérique (4e Rocade)<br>
+          Es-Sénia, Oran, Algérie.
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>© 1992 - 2026 SARL CRG (Comptoir de Robinetterie Générale). Tous droits réservés.</div>
+      <div>Conception Haute Performance & Architecture Digitale B2B</div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+  <script>
+    // Synchroniser le badge mobile avec le panier
+    setInterval(() => {
+      const badge = document.getElementById("mobile-cart-badge");
+      if (badge && window.appState) {
+        badge.innerText = window.appState.cart.reduce((a, b) => a + b.qty, 0);
+      }
+    }, 400);
+  </script>
+</body>
+</html>
