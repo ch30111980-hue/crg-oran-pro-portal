@@ -3,15 +3,18 @@
    Moteur Applicatif B2B : Catalogue, Panier Devis Express & Traduction
    ========================================================================== */
 
-// Base de données des Produits Phares de CRG Oran
+// Base de données des Produits Phares de CRG Oran avec Photos Réelles et Références Officielles
 const PRODUCTS_DATA = [
   // --- RAYON 1 : ROBINETTERIE & VANNES ---
   {
     id: "rob-01",
     cat: "robinetterie",
     brand: "Miro Europe (Italie)",
-    name_fr: "Mitigeur Lavabo Miro Design Luxe",
-    name_ar: "خلاط مغسلة ميرو أوروبا تصميم فاخر",
+    brandCode: "miro",
+    ref: "REF: MIRO-LAV35-LX",
+    image: "assets/products/mitigeur_luxe.png",
+    name_fr: "Mitigeur Lavabo Miro Design Luxe Monotrou",
+    name_ar: "خلاط مغسلة ميرو أوروبا تصميم فاخر ثقب واحد",
     desc_fr: "Cartouche céramique 35mm haute résistance, aérateur anticalcaire Neoperl, finition chromée miroir 15 microns.",
     desc_ar: "خرطوشة سيراميك 35 مم عالية المقاومة، فوهة مضادة للترسبات، طلاء كروم مرآة 15 ميكرون.",
     specs_fr: "Pression : 1-10 bars | Débit : 12 L/min",
@@ -23,6 +26,9 @@ const PRODUCTS_DATA = [
     id: "rob-02",
     cat: "robinetterie",
     brand: "CRG Industriel",
+    brandCode: "crg",
+    ref: "REF: CRG-V25-DN50",
+    image: "assets/products/vanne_boisseau.jpg",
     name_fr: "Vanne d'Arrêt à Boisseau Sphérique Laiton PN25",
     name_ar: "صمام قفل كروي نحاسي صناعي ضغط 25 بار",
     desc_fr: "Corps en laiton matricé à chaud CW617N, passage intégral, poignée acier anti-corrosion rouge, étanchéité PTFE.",
@@ -35,26 +41,32 @@ const PRODUCTS_DATA = [
   {
     id: "rob-03",
     cat: "robinetterie",
-    brand: "Haksu",
-    name_fr: "Kit Douche Encastrable avec Pomme Plafond Extra-Plate",
-    name_ar: "طقم دش مدمج مع رأس دش سقفي رفيع",
+    brand: "Miro Europe / Haksu",
+    brandCode: "miro",
+    ref: "REF: MIRO-DK-ENC300",
+    image: "assets/products/kit_douche.jpg",
+    name_fr: "Kit Douche Encastrable 3 Voies avec Pomme Plafond Extra-Plate",
+    name_ar: "طقم دش مدمج 3 مسارات مع رأس دش سقفي رفيع",
     desc_fr: "Mitigeur thermostatique de sécurité 38°C, corps laiton massif, picots en silicone autonettoyants.",
     desc_ar: "خلاط حراري مع أمان 38 درجة، هيكل نحاسي صلب، رؤوس سيليكون ذاتية التنظيف.",
-    specs_fr: "Tête 300x300mm Inox 304 | Inverseur 2 voies",
-    specs_ar: "رأس 300×300 مم ستانلس ستيل | محول مسارين",
-    unit: "Kit",
+    specs_fr: "Tête 300x300mm Inox 304 | Inverseur 3 voies",
+    specs_ar: "رأس 300×300 مم ستانلس ستيل | محول 3 مسارات",
+    unit: "Kit complet",
     inStock: true
   },
   {
     id: "rob-04",
     cat: "robinetterie",
     brand: "CRG Robinetterie",
-    name_fr: "Robinet d'Ablution et Jardin Renforcé 1/2\"",
-    name_ar: "حنفية وضوء وحدائق مقواة 1/2 بوصة",
-    desc_fr: "Manette quart de tour ergonomique, sortie filetée avec raccord nez de robinet démontable.",
-    desc_ar: "مقبض ربع دورة مريح، مخرج ملولب مع وصلة خرطوم قابلة للفك.",
-    specs_fr: "Filetage 15/21 mâle | Laiton chromé",
-    specs_ar: "لولب 15/21 ذكر | نحاس مطلي بالكروم",
+    brandCode: "crg",
+    ref: "REF: CRG-ROB-J1521",
+    image: "assets/products/robinet_jardin.jpg",
+    name_fr: "Robinet d'Ablution et Jardin Renforcé 1/2\" - 3/4\"",
+    name_ar: "حنفية وضوء وحدائق مقواة 1/2 بوصة مع محول",
+    desc_fr: "Manette quart de tour ergonomique, sortie filetée avec raccord nez de robinet démontable en laiton chromé.",
+    desc_ar: "مقبض ربع دورة مريح، مخرج ملولب مع وصلة خرطوم قابلة للفك من النحاس المطلي.",
+    specs_fr: "Filetage 15/21 mâle | Laiton matricé",
+    specs_ar: "لولب 15/21 ذكر | نحاس صلب",
     unit: "Boîte de 10",
     inStock: true
   },
@@ -64,12 +76,15 @@ const PRODUCTS_DATA = [
     id: "pmp-01",
     cat: "pompes",
     brand: "Wilo (Allemagne)",
-    name_fr: "Circulateur Électronique Wilo-Yonos PICO",
-    name_ar: "مضخة تدوير إلكترونية ويلو ألمانية عالية الكفاءة",
+    brandCode: "wilo",
+    ref: "REF: WILO-YONOS-PICO25",
+    image: "assets/products/wilo_circulateur.png",
+    name_fr: "Circulateur Électronique Haute Efficacité Wilo-Yonos PICO",
+    name_ar: "مضخة تدوير إلكترونية ويلو ألمانية فائقة الكفاءة",
     desc_fr: "Pompe de circulation à haut rendement pour chauffage à eau chaude, technologie de moteur CE sans entretien.",
     desc_ar: "مضخة تدوير عالية الأداء لأنظمة التدفئة المركزية، محرك إلكتروني ألماني بدون صيانة.",
-    specs_fr: "Alimentation 230V | Indice d'efficacité EEI ≤ 0,20",
-    specs_ar: "تغذية 230 فولط | كفاءة طاقة قصوى",
+    specs_fr: "Raccords 1\"1/2 | Indice EEI ≤ 0,20 | 230V",
+    specs_ar: "توصيلات 1.5 بوصة | كفاءة طاقة قصوى | 230 فولط",
     unit: "Unité",
     inStock: true
   },
@@ -77,11 +92,14 @@ const PRODUCTS_DATA = [
     id: "pmp-02",
     cat: "pompes",
     brand: "CRG Pompes",
+    brandCode: "crg",
+    ref: "REF: CRG-CPM158-100",
+    image: "assets/products/pompe_centrifuge.png",
     name_fr: "Pompe Centrifuge Industrielle Multicellulaire CRG-CPM158",
     name_ar: "مضخة مياه طرد مركزي صناعية متعددة المراحل",
     desc_fr: "Conçue pour l'adduction d'eau des immeubles et arrosage agricole. Turbine laiton et arbre inox AISI 304.",
     desc_ar: "مصممة لتغذية العمارات السكنية والسقي الزراعي. عنفة نحاسية وعمود دوران ستانلس ستيل.",
-    specs_fr: "Puissance : 1.0 HP (0.75 kW) | Hauteur manométrique : 35m",
+    specs_fr: "Puissance : 1.0 HP (0.75 kW) | HMT : 35m",
     specs_ar: "القدرة : 1 حصان | أقصى ارتفاع : 35 متر",
     unit: "Unité",
     inStock: true
@@ -90,13 +108,32 @@ const PRODUCTS_DATA = [
     id: "pmp-03",
     cat: "pompes",
     brand: "CRG Automatisme",
-    name_fr: "Pressostat Automatique Servo-Contrôleur de Pression",
+    brandCode: "crg",
+    ref: "REF: CRG-SERVO-EPC1",
+    image: "assets/products/servo_pressostat.jpg",
+    name_fr: "Pressostat Automatique Servo-Contrôleur de Pression Électronique",
     name_ar: "جهاز التحكم الإلكتروني الآلي في ضغط المضخات (سيرفو)",
     desc_fr: "Contrôleur électronique remplaçant le ballon et le manomètre classique. Protection contre la marche à sec.",
     desc_ar: "متحكم إلكتروني بديل لخزان الضغط. مزود بحماية ذكية ضد التشغيل الجاف بدون ماء.",
-    specs_fr: "Courant max : 10A | Pression d'enclenchement : 1.5 bar",
+    specs_fr: "Courant max : 10A | Pression démarrage : 1.5 bar",
     specs_ar: "التيار الأقصى : 10 أمبير | ضغط التشغيل : 1.5 بار",
     unit: "Unité",
+    inStock: true
+  },
+  {
+    id: "pmp-04",
+    cat: "pompes",
+    brand: "CRG Industriel",
+    brandCode: "crg",
+    ref: "REF: CRG-MANO-10B",
+    image: "assets/products/manometre_industriel.png",
+    name_fr: "Manomètre Industriel à Bain de Glycérine 0-10 Bars",
+    name_ar: "مقياس ضغط صناعي بغليسيرين 0-10 بار للشبكات",
+    desc_fr: "Boîtier inox étanche AISI 304, raccord vertical 1/4\" laiton, amortissement des vibrations hydrauliques.",
+    desc_ar: "هيكل ستانلس ستيل مقاوم، توصيل رأسي 1/4 بوصة نحاسي، امتصاص ذبذبات الضغط.",
+    specs_fr: "Cadran Ø63 mm | Précision classe 1.6",
+    specs_ar: "قطر القرص 63 مم | دقة الفئة 1.6",
+    unit: "Pièce",
     inStock: true
   },
 
@@ -105,11 +142,14 @@ const PRODUCTS_DATA = [
     id: "chf-01",
     cat: "chauffage",
     brand: "CRG Thermique",
-    name_fr: "Radiateur Aluminium Haute Émission Thermique (Éléments)",
+    brandCode: "crg",
+    ref: "REF: CRG-RAD-ALU500",
+    image: "assets/products/radiateur_alu.jpg",
+    name_fr: "Radiateur Aluminium Haute Émission Thermique (Batterie)",
     name_ar: "مشعاع تدفئة ألمنيوم فائق التبادل الحراري (أقسام)",
     desc_fr: "Alliage d'aluminium injecté sous pression, double couche de peinture époxy par anaphorèse, chauffe ultra-rapide.",
     desc_ar: "سبيكة ألمنيوم مصبوبة تحت الضغط، طلاء إيبوكسي مزدوج عالي الجودة، تسخين فوري للغرف.",
-    specs_fr: "Entraxe 500mm | Rendement : 185 Watts / élément",
+    specs_fr: "Entraxe 500mm | Rendement : 185W / élément",
     specs_ar: "المسافة بين المحاور 500 مم | المردود : 185 واط / قسم",
     unit: "Batterie 10 élém.",
     inStock: true
@@ -117,7 +157,10 @@ const PRODUCTS_DATA = [
   {
     id: "chf-02",
     cat: "chauffage",
-    brand: "CIMM / Varem",
+    brand: "CIMM / CRG",
+    brandCode: "crg",
+    ref: "REF: CIMM-EXP-V24L",
+    image: "assets/products/vase_expansion.png",
     name_fr: "Vase d'Expansion à Membrane Interchangeable Chauffage",
     name_ar: "خزان تمدد بغشاء مطاطي لأنظمة التدفئة المركزية",
     desc_fr: "Absorption des variations de volume d'eau causées par la montée en température. Membrane EPDM haute température.",
@@ -127,13 +170,32 @@ const PRODUCTS_DATA = [
     unit: "Unité",
     inStock: true
   },
+  {
+    id: "chf-03",
+    cat: "chauffage",
+    brand: "CRG Chauffage",
+    brandCode: "crg",
+    ref: "REF: CRG-CHAUD-24KW",
+    image: "assets/products/chaudiere_gaz.png",
+    name_fr: "Chaudière Murale Gaz Mixte Chauffage & Sanitaire 24 kW",
+    name_ar: "مرجل تدفئة حائطي غازي مزدوج للتدفئة والماء الساخن 24 كيلوواط",
+    desc_fr: "Double échangeur à plaques inox, allumage électronique sans veilleuse, régulation modulante basse consommation.",
+    desc_ar: "مبادل حراري مزدوج صفائح ستانلس، إشعال إلكتروني ذكي، تعديل تلقائي لتوفير الغاز.",
+    specs_fr: "Puissance 24 kW | Rendement 93% | Ventouse",
+    specs_ar: "القدرة 24 ك.واط | كفاءة 93% | مدخنة تهوية",
+    unit: "Unité",
+    inStock: true
+  },
 
   // --- RAYON 4 : RACCORDS & TUYAUTERIE ---
   {
     id: "tub-01",
     cat: "tuyauterie",
     brand: "General Fittings (Italie)",
-    name_fr: "Raccords Multicouche à Sertir et Compression Métal",
+    brandCode: "general-fittings",
+    ref: "REF: GF-MC-SERT-DN20",
+    image: "assets/products/raccords_multicouche.jpg",
+    name_fr: "Raccords Multicouche à Sertir et Compression Métal Laiton",
     name_ar: "توصيلات أنابيب متعددة الطبقات كبس وضغط إيطالية",
     desc_fr: "Certification technique européenne CSTB/DVGW. Bague inox de sertissage avec fenêtres de contrôle visuel.",
     desc_ar: "شهادة جودة أوروبية معتمدة. حلقة ستانلس ستيل مع نوافذ فحص بصري لدخول الأنبوب.",
@@ -146,9 +208,12 @@ const PRODUCTS_DATA = [
     id: "tub-02",
     cat: "tuyauterie",
     brand: "Halcor (Grèce)",
-    name_fr: "Tube Cuivre Écroui & Recuit Sanitaire / Gaz",
-    name_ar: "أنابيب نحاس صلب ومرن صحي وللغاز هالكور",
-    desc_fr: "Cuivre pur désoxyydé au phosphore Cu-DHP 99,9%, traitement interne anti-corrosion, norme EN 1057.",
+    brandCode: "halcor",
+    ref: "REF: HAL-CU-EN1057",
+    image: "assets/products/vanne_boisseau.jpg",
+    name_fr: "Tube Cuivre Écroui & Recuit Sanitaire / Gaz Certifié EN 1057",
+    name_ar: "أنابيب نحاس صلب ومرن صحي وللغاز هالكور معتمدة",
+    desc_fr: "Cuivre pur désoxydé au phosphore Cu-DHP 99,9%, traitement interne anti-corrosion, norme EN 1057.",
     desc_ar: "نحاس نقي منزوع الأكسجين 99.9%، معالجة داخلية ضد التآكل، معيار أوروبي EN 1057.",
     specs_fr: "Barres de 5m ou Couronnes 50m | Ø12 à Ø42 mm",
     specs_ar: "قضبان 5 أمتار أو لفائف 50 متر | أقطار 12 إلى 42 مم",
@@ -161,6 +226,9 @@ const PRODUCTS_DATA = [
     id: "evc-01",
     cat: "evacuation",
     brand: "Alba & CRG",
+    brandCode: "alba",
+    ref: "REF: ALBA-CAN-INOX80",
+    image: "assets/products/caniveau_inox.png",
     name_fr: "Caniveau de Douche à l'Italienne Inox Brossé avec Siphon 360°",
     name_ar: "قناة تصريف دوش إيطالي ستانلس ستيل مع سيفون 360 درجة",
     desc_fr: "Grille design découpée laser inox AISI 304, garde d'eau anti-odeurs amovible, nettoyage sans démontage.",
@@ -174,6 +242,9 @@ const PRODUCTS_DATA = [
     id: "evc-02",
     cat: "evacuation",
     brand: "CRG Assainissement",
+    brandCode: "crg",
+    ref: "REF: CRG-SIPH-SOL15",
+    image: "assets/products/siphon_sol.png",
     name_fr: "Siphon de Sol Orientable avec Clapet Anti-Retour Anti-Rats",
     name_ar: "سيفون أرضي قابل للتوجيه مع صمام مضاد للرجوع والروائح",
     desc_fr: "Corps PVC résistant aux chocs thermiques et chimiques, platine inox 150x150 mm.",
@@ -189,6 +260,9 @@ const PRODUCTS_DATA = [
     id: "san-01",
     cat: "sanitaire",
     brand: "Nofer (Espagne)",
+    brandCode: "nofer",
+    ref: "REF: NOFER-E80L-TITAN",
+    image: "assets/products/mitigeur_luxe.png",
     name_fr: "Chauffe-eau Électrique Blindé Haute Durabilité Nofer",
     name_ar: "سخان مياه كهربائي عالي الجودة والمتانة نوفر إسباني",
     desc_fr: "Cuve en acier émaillé au titane, anode magnésium surdimensionnée anti-calcaire, isolation polyuréthane 0% CFC.",
@@ -203,6 +277,7 @@ const PRODUCTS_DATA = [
 // État global de l'application
 const appState = {
   activeCat: "all",
+  activeBrand: "all",
   searchQuery: "",
   currentLang: "fr",
   cart: [] // { product, qty }
@@ -211,7 +286,7 @@ const appState = {
 // Dictionnaire de Traduction Bilingue
 const I18N = {
   fr: {
-    topBarDepot: "Siège & Dépôt : Îlot N°08, Zone Industrielle, 4ème Périphérique, Es-Sénia, Oran",
+    topBarDepot: "Siège & Dépôt : Îlot N°08, Zone Ind. 4ème Périphérique, Es-Sénia, Oran | Sam-Mer 8h-17h • Jeu 8h-12h30",
     callUs: "Appel Commercial : 0560 25 26 32",
     wholesalerBadge: "GROSSISTE ET IMPORTATEUR OFFICIEL EN ALGÉRIE",
     heroTitlePart1: "L'Excellence en Robinetterie,",
@@ -228,13 +303,14 @@ const I18N = {
     statWilayasLabel: "Livraison & Expédition",
     statBrands: "100%",
     statBrandsLabel: "Certifié d'Origine",
-    depotLiveBadge: "Dépôt Ouvert 6j/7",
+    depotLiveBadge: "Ouvert Samedi – Jeudi",
+    depotHoursSub: "Sam-Mer 8h-17h • Jeu 8h-12h30",
     depotTitle: "Enlèvement Rapide 4ème Périphérique",
     depotDesc: "Emplacement stratégique à Es-Sénia sur la 4e Rocade. Quai de chargement direct pour semi-remorques et camionnettes.",
     feature1: "Accès poids lourds et stationnement aisé",
     feature2: "Facturation pro et bons de livraison immédiats",
     feature3: "Conseil technique hydraulique par nos ingénieurs",
-    btnGpsRoute: "Itinéraire GPS Dépôt",
+    btnGpsRoute: "Itinéraire GPS Dépôt (Google Maps / Waze)",
     catalogueSubtitle: "STOCKS DISPONIBLES EN TEMPS RÉEL",
     catalogueTitle: "Rayons Spécialisés B2B & Industrie",
     searchPlaceholder: "Rechercher une vanne, pompe Wilo, raccord, diamètre, marque...",
@@ -245,19 +321,22 @@ const I18N = {
     catTuyauterie: "Tuyauterie & Raccords",
     catEvacuation: "Évacuation & Siphons",
     catSanitaire: "Chauffe-eau & Sanitaire",
-    inStockText: "En stock au dépôt",
-    btnAddToQuote: "+ Ajouter au Devis",
+    filterBrandLabel: "Marque :",
+    brandAll: "Toutes les Marques",
+    inStockText: "En stock dépôt Oran",
+    btnAddToQuote: "+ Devis",
+    btnDirectWhatsApp: "WhatsApp Direct",
     modalQuoteTitle: "Votre Bon de Commande / Devis Express",
     modalQuoteSub: "Préparez votre liste et envoyez-la directement sur le WhatsApp du commercial CRG.",
     clientNameLabel: "Votre Nom / Entreprise :",
     clientPhoneLabel: "Numéro de Téléphone :",
     clientWilayaLabel: "Votre Ville / Wilaya :",
     btnSendWhatsApp: "Transmettre la Commande sur WhatsApp",
-    emptyCartNotice: "Votre sélection de devis est vide. Cliquez sur '+ Ajouter au Devis' sur les articles de votre choix.",
+    emptyCartNotice: "Votre sélection de devis est vide. Cliquez sur '+ Devis' sur les articles de votre choix.",
     cartTriggerText: "Mon Devis Pro"
   },
   ar: {
-    topBarDepot: "المقر والمستودع : القطعة رقم 08، المنطقة الصناعية، الطريق المحيطي الرابع، السانية، وهران",
+    topBarDepot: "المقر والمستودع : القطعة 08، المنطقة الصناعية، المحيطي الرابع، السانية، وهران | السبت-الأربعاء 8h-17h • الخميس 8h-12h30",
     callUs: "المصلحة التجارية : 0560 25 26 32",
     wholesalerBadge: "المستورد والموزع الرسمي بالجملة في الجزائر",
     heroTitlePart1: "الريادة في صمامات المياه،",
@@ -274,13 +353,14 @@ const I18N = {
     statWilayasLabel: "توصيل وشحن سريع",
     statBrands: "100%",
     statBrandsLabel: "أصلي ومعتمد بالكامل",
-    depotLiveBadge: "المستودع مفتوح 6 أيام/7",
+    depotLiveBadge: "مفتوح من السبت إلى الخميس",
+    depotHoursSub: "السبت - الأربعاء 8h-17h • الخميس 8h-12h30",
     depotTitle: "شحن سريع من مستودع المحيطي الرابع",
     depotDesc: "موقع استراتيجي بالسانية على الطريق المحيطي 4. رصيف شحن مباشر للشاحنات والمركبات التجارية.",
     feature1: "دخول سهل للشاحنات ومواقف واسعة للسيارات",
     feature2: "فواتير نظامية معتمدة ووصولات تسليم فورية",
     feature3: "استشارات تقنية هيدروليكية من مهندسينا",
-    btnGpsRoute: "المسار المباشر عبر GPS",
+    btnGpsRoute: "المسار المباشر عبر GPS (خرائط غوغل / وايز)",
     catalogueSubtitle: "مخزون فعلي متاح حالياً للتسليم",
     catalogueTitle: "الأقسام التخصصية للشركات والمهنيين",
     searchPlaceholder: "ابحث عن صمام، مضخة ويلو، رصاص، نحاس، قطر، علامة تجارية...",
@@ -291,15 +371,18 @@ const I18N = {
     catTuyauterie: "الأنابيب والتوصيلات",
     catEvacuation: "الصرف الصحي والمزاريب",
     catSanitaire: "سخانات المياه واللوازم الصحية",
-    inStockText: "متوفر حالياً بالمستودع",
-    btnAddToQuote: "+ إضافة لطلب التسعيرة",
+    filterBrandLabel: "العلامة التجارية :",
+    brandAll: "كل العلامات",
+    inStockText: "متوفر بمستودع وهران",
+    btnAddToQuote: "+ تسعيرة",
+    btnDirectWhatsApp: "واتساب مباشر",
     modalQuoteTitle: "وصل طلب التسعيرة والطلبيات المباشرة",
     modalQuoteSub: "حدد المواد المطلوبة وأرسل القائمة فوراً إلى واتساب المصلحة التجارية لشركة CRG.",
     clientNameLabel: "الاسم أو اسم المؤسسة :",
     clientPhoneLabel: "رقم الهاتف للتواصل :",
     clientWilayaLabel: "البلدية أو الولاية :",
     btnSendWhatsApp: "إرسال قائمة الطلبية عبر واتساب",
-    emptyCartNotice: "قائمة التسعيرة فارغة حالياً. انقر على '+ إضافة لطلب التسعيرة' لاختيار المنتجات.",
+    emptyCartNotice: "قائمة التسعيرة فارغة حالياً. انقر على '+ تسعيرة' لاختيار المنتجات.",
     cartTriggerText: "قائمة التسعيرة"
   }
 };
@@ -330,6 +413,17 @@ function setupEventListeners() {
       filterPills.forEach(p => p.classList.remove("active"));
       pill.classList.add("active");
       appState.activeCat = pill.dataset.cat;
+      renderProducts();
+    });
+  });
+
+  // Filtres par Marque
+  const brandPills = document.querySelectorAll(".brand-pill");
+  brandPills.forEach(pill => {
+    pill.addEventListener("click", () => {
+      brandPills.forEach(p => p.classList.remove("active"));
+      pill.classList.add("active");
+      appState.activeBrand = pill.dataset.brand;
       renderProducts();
     });
   });
@@ -368,7 +462,7 @@ function setupEventListeners() {
   }
 }
 
-// Rendu des Cartes Produits
+// Rendu des Cartes Produits avec Photos Réelles et Double CTA
 function renderProducts() {
   const container = document.getElementById("products-grid");
   if (!container) return;
@@ -377,9 +471,10 @@ function renderProducts() {
 
   const filtered = PRODUCTS_DATA.filter(p => {
     const matchCat = appState.activeCat === "all" || p.cat === appState.activeCat;
-    const nameSearch = (p.name_fr + " " + p.name_ar + " " + p.brand + " " + p.specs_fr).toLowerCase();
+    const matchBrand = appState.activeBrand === "all" || p.brandCode === appState.activeBrand;
+    const nameSearch = (p.name_fr + " " + p.name_ar + " " + p.brand + " " + p.ref + " " + p.specs_fr).toLowerCase();
     const matchSearch = appState.searchQuery === "" || nameSearch.includes(appState.searchQuery);
-    return matchCat && matchSearch;
+    return matchCat && matchBrand && matchSearch;
   });
 
   if (filtered.length === 0) {
@@ -398,28 +493,57 @@ function renderProducts() {
     const desc = isAr ? p.desc_ar : p.desc_fr;
     const specs = isAr ? p.specs_ar : p.specs_fr;
     const btnText = I18N[appState.currentLang].btnAddToQuote;
+    const btnWaText = I18N[appState.currentLang].btnDirectWhatsApp;
     const inStockText = I18N[appState.currentLang].inStockText;
 
     return `
       <div class="product-card" id="card-${p.id}">
-        <div class="product-brand-tag">${escapeHtml(p.brand)}</div>
-        <h3 class="product-name">${escapeHtml(name)}</h3>
-        <p class="product-specs">${escapeHtml(desc)}</p>
-        <div>
-          <span class="product-spec-pill">${escapeHtml(specs)}</span>
+        <div class="product-img-wrapper">
+          <img src="${p.image}" alt="${escapeHtml(name)}" class="product-img" loading="lazy">
+          <span class="product-ref-badge">${escapeHtml(p.ref)}</span>
         </div>
+
+        <div class="product-info-body">
+          <div class="product-brand-tag">${escapeHtml(p.brand)}</div>
+          <h3 class="product-name">${escapeHtml(name)}</h3>
+          <p class="product-specs">${escapeHtml(desc)}</p>
+          <div style="margin-bottom: 12px;">
+            <span class="product-spec-pill">${escapeHtml(specs)}</span>
+          </div>
+        </div>
+
         <div class="product-card-footer">
           <div class="stock-status">
             <span class="stock-indicator-dot"></span>
             <span>${inStockText}</span>
           </div>
-          <button class="btn-add-order" onclick="addToCart('${p.id}')">
-            ${btnText}
-          </button>
+
+          <div class="product-actions-group">
+            <button class="btn-add-order" onclick="addToCart('${p.id}')" title="Ajouter à la liste de devis">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+              <span>${btnText}</span>
+            </button>
+            <button class="btn-direct-wa" onclick="openDirectProductWhatsApp('${p.id}')" title="Demander un prix immédiat sur WhatsApp">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 2C6.496 2 2 6.495 2 12.029c0 1.954.563 3.774 1.536 5.313L2.001 22l4.821-1.493A9.97 9.97 0 0 0 12.03 22c5.534 0 10.029-4.496 10.029-10.03C22.06 6.495 17.565 2 12.031 2zm5.72 14.156c-.244.686-1.218 1.332-1.785 1.408-.544.072-1.238.106-3.864-.984-2.855-1.185-4.686-4.086-4.83-4.275-.138-.19-1.144-1.523-1.144-2.903 0-1.38.723-2.059.98-2.342.257-.282.56-.353.748-.353.187 0 .375.002.538.01.173.009.404-.066.632.48.236.567.807 1.97.877 2.112.071.142.118.309.024.499-.094.19-.142.308-.283.473-.14.166-.296.371-.422.498-.142.142-.29.297-.124.582.165.284.737 1.215 1.58 1.966 1.085.966 2 1.266 2.285 1.407.284.142.452.119.619-.071.166-.19.712-.83.901-1.116.19-.284.38-.237.64-.142.261.095 1.657.781 1.942.923.284.143.475.214.545.333.072.12.072.69-.172 1.376z"/></svg>
+              <span>${btnWaText}</span>
+            </button>
+          </div>
         </div>
       </div>
     `;
   }).join("");
+}
+
+// Fonction pour devis direct WhatsApp 1 article
+function openDirectProductWhatsApp(productId) {
+  const p = PRODUCTS_DATA.find(item => item.id === productId);
+  if (!p) return;
+  const isAr = appState.currentLang === "ar";
+  const name = isAr ? p.name_ar : p.name_fr;
+  const text = isAr
+    ? `السلام عليكم شركة CRG وهران، أطلب تسعيرة وتوفر المخزون للمنتج : ${name} (${p.ref}). الكمية المطلوبة للجملة :`
+    : `Bonjour SARL CRG Oran, je souhaite un devis et disponibilité pour l'article : ${name} (${p.ref}). Quantité souhaitée :`;
+  window.open(`https://api.whatsapp.com/send?phone=213560252632&text=${encodeURIComponent(text)}`, "_blank");
 }
 
 // Gestion du Panier B2B

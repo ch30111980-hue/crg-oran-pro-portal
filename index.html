@@ -55,7 +55,7 @@
         <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
         <circle cx="12" cy="10" r="3"></circle>
       </svg>
-      <span data-i18n="topBarDepot">Siège & Dépôt : Îlot N°08, Zone Industrielle, 4ème Périphérique, Es-Sénia, Oran</span>
+      <span data-i18n="topBarDepot">Siège & Dépôt : Îlot N°08, Zone Ind. 4ème Périphérique, Es-Sénia, Oran | Sam-Mer 8h-17h • Jeu 8h-12h30</span>
     </div>
     <div class="top-bar-contacts">
       <a href="tel:+213560252632" class="top-link">
@@ -159,8 +159,8 @@
     <!-- Carte Visuelle Interactive du Dépôt / Showroom -->
     <div class="hero-showcase-card" id="depot">
       <div class="showcase-header">
-        <span class="depot-badge" data-i18n="depotLiveBadge">Dépôt Ouvert 6j/7</span>
-        <span style="font-size: 0.8rem; color: var(--text-dim);">8h00 - 17h00</span>
+        <span class="depot-badge" data-i18n="depotLiveBadge">Ouvert Samedi – Jeudi</span>
+        <span style="font-size: 0.8rem; color: var(--text-dim);" data-i18n="depotHoursSub">Sam-Mer 8h-17h • Jeu 8h-12h30</span>
       </div>
 
       <h3 style="font-size: 1.4rem; margin-bottom: 8px;" data-i18n="depotTitle">Enlèvement Rapide 4ème Périphérique</h3>
@@ -221,7 +221,7 @@
       </div>
     </div>
 
-    <!-- Contrôles : Recherche & Filtres par catégorie -->
+    <!-- Contrôles : Recherche & Filtres par catégorie et par marque -->
     <div class="catalogue-controls">
       <div class="search-box-wrapper">
         <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
@@ -239,6 +239,19 @@
         <button class="cat-pill" data-cat="tuyauterie" data-i18n="catTuyauterie">Tuyauterie & Raccords</button>
         <button class="cat-pill" data-cat="evacuation" data-i18n="catEvacuation">Évacuation & Siphons</button>
         <button class="cat-pill" data-cat="sanitaire" data-i18n="catSanitaire">Chauffe-eau & Sanitaire</button>
+      </div>
+
+      <!-- NOUVEAU : FILTRAGE SPÉCIALISÉ PAR MARQUE DISTRIBUÉE -->
+      <div class="brand-filter-bar" id="brand-pills">
+        <span class="filter-label" data-i18n="filterBrandLabel">Marque :</span>
+        <button class="brand-pill active" data-brand="all" data-i18n="brandAll">Toutes les Marques</button>
+        <button class="brand-pill" data-brand="miro">Miro Europe</button>
+        <button class="brand-pill" data-brand="wilo">Wilo</button>
+        <button class="brand-pill" data-brand="crg">CRG Industriel</button>
+        <button class="brand-pill" data-brand="general-fittings">General Fittings</button>
+        <button class="brand-pill" data-brand="halcor">Halcor</button>
+        <button class="brand-pill" data-brand="alba">Alba</button>
+        <button class="brand-pill" data-brand="nofer">Nofer</button>
       </div>
     </div>
 

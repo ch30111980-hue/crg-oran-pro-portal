@@ -653,10 +653,60 @@ body.rtl .search-icon {
   box-shadow: var(--shadow-copper-glow);
 }
 
+/* NOUVEAU : Barre de Filtres par Marque */
+.brand-filter-bar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.filter-label {
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: var(--accent-gold);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-right: 4px;
+}
+
+body.rtl .filter-label {
+  margin-right: 0;
+  margin-left: 4px;
+}
+
+.brand-pill {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-light);
+  color: var(--text-dim);
+  padding: 5px 12px;
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.brand-pill:hover {
+  background: rgba(217, 119, 54, 0.1);
+  border-color: var(--border-copper);
+  color: var(--text-main);
+}
+
+.brand-pill.active {
+  background: rgba(212, 175, 55, 0.15);
+  border-color: var(--accent-brass);
+  color: #FFF;
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
+}
+
 /* Grille des Produits */
 .products-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 24px;
 }
 
@@ -664,9 +714,10 @@ body.rtl .search-icon {
   background: var(--bg-card);
   border: 1px solid var(--border-light);
   border-radius: var(--radius-md);
-  padding: 20px;
+  padding: 16px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   transition: var(--transition-smooth);
   position: relative;
   overflow: hidden;
@@ -679,38 +730,89 @@ body.rtl .search-icon {
   box-shadow: var(--shadow-md);
 }
 
+/* Wrapper Image Produit Pro */
+.product-img-wrapper {
+  width: 100%;
+  height: 200px;
+  background: radial-gradient(circle at center, rgba(30, 41, 59, 0.6) 0%, rgba(8, 16, 32, 0.95) 100%);
+  border-radius: var(--radius-sm);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-bottom: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.product-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 12px;
+  transition: transform 0.4s ease;
+}
+
+.product-card:hover .product-img {
+  transform: scale(1.08);
+}
+
+.product-ref-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(6, 13, 26, 0.88);
+  border: 1px solid rgba(217, 119, 54, 0.4);
+  color: var(--accent-gold);
+  font-size: 0.66rem;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: 4px;
+  letter-spacing: 0.05em;
+  backdrop-filter: blur(4px);
+}
+
+body.rtl .product-ref-badge {
+  right: auto;
+  left: 10px;
+}
+
+.product-info-body {
+  flex-grow: 1;
+}
+
 .product-brand-tag {
   font-size: 0.72rem;
   font-weight: 800;
   color: var(--accent-gold);
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 
 .product-name {
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   font-weight: 700;
   margin-bottom: 8px;
-  line-height: 1.3;
+  line-height: 1.35;
+  color: #FFF;
 }
 
 .product-specs {
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   color: var(--text-muted);
-  margin-bottom: 16px;
-  flex-grow: 1;
+  margin-bottom: 12px;
+  line-height: 1.5;
 }
 
 .product-spec-pill {
   display: inline-block;
   background: rgba(0, 168, 232, 0.1);
   color: var(--primary);
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 700;
   padding: 3px 8px;
   border-radius: var(--radius-sm);
-  margin-top: 6px;
 }
 
 .product-card-footer {
@@ -720,15 +822,17 @@ body.rtl .search-icon {
   margin-top: 14px;
   padding-top: 14px;
   border-top: 1px solid var(--border-light);
+  gap: 10px;
 }
 
 .stock-status {
   display: flex;
   align-items: center;
   gap: 6px;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   color: #10B981;
   font-weight: 600;
+  white-space: nowrap;
 }
 
 .stock-indicator-dot {
@@ -736,24 +840,57 @@ body.rtl .search-icon {
   height: 7px;
   background: #10B981;
   border-radius: 50%;
+  box-shadow: 0 0 6px #10B981;
+}
+
+.product-actions-group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .btn-add-order {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid var(--border-light);
-  color: var(--text-main);
-  padding: 6px 12px;
+  background: linear-gradient(135deg, var(--accent-copper) 0%, #a85420 100%);
+  border: none;
+  color: #FFF;
+  padding: 7px 11px;
   border-radius: var(--radius-sm);
-  font-size: 0.82rem;
+  font-size: 0.78rem;
   font-weight: 700;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
   transition: var(--transition-fast);
+  white-space: nowrap;
 }
 
 .btn-add-order:hover {
-  background: var(--primary);
-  color: #000;
-  border-color: var(--primary);
+  filter: brightness(1.15);
+  box-shadow: 0 0 10px rgba(217, 119, 54, 0.4);
+}
+
+.btn-direct-wa {
+  background: rgba(37, 211, 102, 0.12);
+  border: 1px solid rgba(37, 211, 102, 0.35);
+  color: #25D366;
+  padding: 7px 9px;
+  border-radius: var(--radius-sm);
+  font-size: 0.76rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: var(--transition-fast);
+  white-space: nowrap;
+}
+
+.btn-direct-wa:hover {
+  background: #25D366;
+  color: #060D1A;
+  border-color: #25D366;
+  box-shadow: 0 0 12px rgba(37, 211, 102, 0.4);
 }
 
 /* Modal Panier Devis Pro WhatsApp */
